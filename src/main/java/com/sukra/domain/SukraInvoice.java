@@ -51,12 +51,6 @@ public class SukraInvoice {
      * TODO Auto-generated attribute documentation
      *
      */
-    private String sukraNo;
-
-    /**
-     * TODO Auto-generated attribute documentation
-     *
-     */
 	@Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date invoiceDate;
@@ -160,24 +154,6 @@ public class SukraInvoice {
     /**
      * TODO Auto-generated method documentation
      *
-     * @return String
-     */
-    public String getSukraNo() {
-        return this.sukraNo;
-    }
-
-    /**
-     * TODO Auto-generated method documentation
-     *
-     * @param sukraNo
-     */
-    public void setSukraNo(String sukraNo) {
-        this.sukraNo = sukraNo;
-    }
-
-    /**
-     * TODO Auto-generated method documentation
-     *
      * @return Date
      */
     public Date getInvoiceDate() {
@@ -253,7 +229,7 @@ public class SukraInvoice {
      * @return String
      */
     public String toString() {
-		return "SukraInvoice {" + "id='" + id + '\'' + ", sukraNo='" + sukraNo + '\'' + ", invoiceDate='" + invoiceDate
+		return "SukraInvoice {" + "id='" + id + '\'' + ", invoiceDate='" + invoiceDate
 				+ '\'' + ", paidTo='" + paidTo + '\'' + ", purposeOf='" + purposeOf + '\'' + ", sumOfRupees='"
 				+ sumOfRupees + "}";
     }

@@ -32,16 +32,7 @@
           <form class="form-horizontal validate" method="POST" data-th-object="${sukraInvoice}" data-th-action="@{${collectionLink.to('create').with('sukraInvoice', sukraInvoice.id)}}">
 
             <fieldset id="containerFields">
-              <legend class="sr-only" data-th-text="#{label_data_entity(#{label_sukrainvoice})}">SukraInvoice data </legend>
-
-<div class="form-group has-error has-feedback" data-z="e907d5e" id="sukrainvoice-sukrano-field" data-th-classappend="${#fields.hasErrors('sukraNo')}? 'has-error has-feedback'" data-th-class="form-group">
-  <label for="sukraNo" class="col-md-3 control-label" data-th-text="#{label_sukrainvoice_sukrano}">sukraNo</label>
-  <div class="col-md-6">
-    <input id="sukraNo" name="sukraNo" data-th-value="*{{sukraNo}}" type="text" class="form-control" placeholder="sukraNo" data-th-placeholder="#{label_sukrainvoice_sukrano}" data-toggle="tooltip" aria-describedby="sukraNoStatus" />
-      <span data-th-classappend="${#fields.hasErrors('sukraNo')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('sukraNo')}" aria-hidden="true"></span>
-      <span id="sukraNo-error" class="help-block" data-th-if="${#fields.hasErrors('sukraNo')}" data-th-errors="*{sukraNo}">Error message.</span>
-  </div>
-</div>
+              <legend class="sr-only" data-th-text="#{label_data_entity(#{label_sukrainvoice})}">SukraInvoice Data </legend>
 <div class="form-group has-error has-feedback" id="sukrainvoice-invoicedate-field" data-z="a874999e" data-th-classappend="${#fields.hasErrors('invoiceDate')}? 'has-error has-feedback'" data-th-class="form-group">
   <label for="invoiceDate" class="col-md-3 control-label" data-th-text="#{label_sukrainvoice_invoicedate}">invoiceDate</label>
   <div class="col-md-3">

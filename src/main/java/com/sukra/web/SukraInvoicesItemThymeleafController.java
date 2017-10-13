@@ -145,8 +145,8 @@ public class SukraInvoicesItemThymeleafController {
      * @param method
      * @return SukraInvoice
      */
-    @ModelAttribute
-    public SukraInvoice getSukraInvoice(@PathVariable("sukraInvoice") Long id, Locale locale, HttpMethod method) {
+	@ModelAttribute
+	public SukraInvoice getSukraInvoice(@PathVariable("sukraInvoice") Long id, Locale locale, HttpMethod method) {
         SukraInvoice sukraInvoice = null;
         if (HttpMethod.PUT.equals(method)) {
             sukraInvoice = sukraInvoiceService.findOneForUpdate(id);
@@ -159,7 +159,7 @@ public class SukraInvoicesItemThymeleafController {
         }
 		GeneratePdf.getInstance().generatePdf(sukraInvoice, "sukra_invoice_template.pdf",
 				sukraInvoice.getPaidTo().replaceAll(" ", "") + "_Invoice_" + LocalDate.now() + ".pdf");
-        return sukraInvoice;
+		return sukraInvoice;
     }
 
     /**
@@ -169,7 +169,7 @@ public class SukraInvoicesItemThymeleafController {
      * @param model
      * @return ModelAndView
      */
-    @GetMapping(name = "show")
+	@GetMapping(name = "show")
     public ModelAndView show(@ModelAttribute SukraInvoice sukraInvoice, Model model) {
         model.addAttribute("sukraInvoice", sukraInvoice);
         return new ModelAndView("sukrainvoices/show");

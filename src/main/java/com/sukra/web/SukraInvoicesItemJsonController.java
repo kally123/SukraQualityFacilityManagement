@@ -1,15 +1,13 @@
 package com.sukra.web;
-import com.sukra.domain.SukraInvoice;
-import org.springframework.roo.addon.web.mvc.controller.annotations.ControllerType;
-import org.springframework.roo.addon.web.mvc.controller.annotations.RooController;
-import org.springframework.roo.addon.web.mvc.controller.annotations.responses.json.RooJSON;
-import com.sukra.service.api.SukraInvoiceService;
-import io.springlets.web.NotFoundException;
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.roo.addon.web.mvc.controller.annotations.ControllerType;
+import org.springframework.roo.addon.web.mvc.controller.annotations.RooController;
+import org.springframework.roo.addon.web.mvc.controller.annotations.responses.json.RooJSON;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +20,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 import org.springframework.web.util.UriComponents;
 
+import com.sukra.domain.SukraInvoice;
+import com.sukra.service.api.SukraInvoiceService;
+
+import io.springlets.web.NotFoundException;
+
 /**
  * = SukraInvoicesItemJsonController
  *
@@ -31,7 +34,7 @@ import org.springframework.web.util.UriComponents;
 @RooController(entity = SukraInvoice.class, type = ControllerType.ITEM)
 @RooJSON
 @RestController
-@RequestMapping(value = "/sukrainvoices/{sukraInvoice}", name = "SukraInvoicesItemJsonController", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/sukrainvoices/{sukraInvoice}", name = "SukraInvoicesItemJsonController", produces = MediaType.APPLICATION_JSON_VALUE)
 public class SukraInvoicesItemJsonController {
 
     /**
